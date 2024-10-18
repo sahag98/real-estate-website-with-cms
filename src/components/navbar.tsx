@@ -14,14 +14,14 @@ const Navbar = () => {
   console.log(pathname)
   const [navOpen, setNavOpen] = useState(false)
   return (
-    <nav className="fixed top-0 z-10 w-full border-b bg-background">
+    <nav className="fixed top-0 z-20 w-full border-b bg-background">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-3">
         <Link href={"/"}>
           <Image
             src={siteConfig.logo}
-            width={1000}
-            className="w-16 lg:w-20"
-            height={1000}
+            width={492}
+            className="w-24 md:w-44"
+            height={248}
             priority
             alt="dougs tractor works logo"
           />
@@ -58,7 +58,7 @@ const Navbar = () => {
           )}
           id="navbar-default"
         >
-          <ul className="mt-4 flex flex-col space-y-10 rounded-lg border border-gray-100 bg-gray-50 p-4  dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-10 md:space-y-0 md:border-0 md:bg-white md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
+          <ul className="mt-4 flex flex-col space-y-10 rounded-lg border  md:mt-0 md:flex-row md:space-x-10 md:space-y-0 md:border-0 md:p-0  rtl:space-x-reverse">
             <Link
               className={cn(pathname === "/" && " font-semibold text-primary")}
               href={"/"}

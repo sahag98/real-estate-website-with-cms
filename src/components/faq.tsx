@@ -59,13 +59,13 @@ const FAQ = () => {
             </AccordionItem>
           ))}
         </Accordion>
-        <Image
+        {/* <Image
           src={"/about-placeholder.png"}
           width={1000}
           height={1000}
           alt="about placeholder"
           className="rounded-md object-cover lg:w-1/3"
-        />
+        /> */}
       </div>
     </div>
   )

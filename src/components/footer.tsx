@@ -67,14 +67,13 @@ export default function Footer() {
               Gallery
             </Link>
           </div>
-          <div className="flex flex-col gap-2 text-foreground">
+          {/* <div className="flex flex-col gap-2 text-foreground">
             <h5 className="mb-2">Business Hours</h5>
             <span className="font-medium">M-TH : 5:30am-10am & 5pm-8pm</span>
             <span className="font-medium">F: 2pm - 8pm</span>
             <span className="font-medium">SAT&SUN : 2pm - 8pm</span>
-            {/* <span>$60 fee for booking on off days (Sun and Mon)</span> */}
-          </div>
-          <div className="flex flex-col gap-2 text-foreground">
+          </div> */}
+          {/* <div className="flex flex-col gap-2 text-foreground">
             <h5 className="font-bold">Service Areas (If applicable)</h5>
             <p>Anywhere within "county" (and surrounding borders) including:</p>
             <ul className="space-y-2 ">
@@ -84,7 +83,7 @@ export default function Footer() {
               <li>- City 4</li>
               <li>- City 5</li>
             </ul>
-          </div>
+          </div> */}
         </div>
         <div className="not-prose flex flex-col justify-between gap-6 border-t border-t-foreground pt-5 md:flex-row md:items-center md:gap-2">
           <div className="flex gap-2">
@@ -101,7 +100,7 @@ export default function Footer() {
             </Link>
           </div>
           <p className="text-foreground">
-            © {siteConfig.name} . All rights reserved. 2024-present.
+            © Alan Reyes . All rights reserved. 2024-present.
           </p>
         </div>
       </div>

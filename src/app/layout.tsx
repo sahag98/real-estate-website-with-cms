@@ -1,7 +1,7 @@
 import "@/styles/globals.css"
 
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Poppins } from "next/font/google"
 import { ViewTransitions } from "next-view-transitions"
 
 import { siteConfig } from "@/config/site"
@@ -9,7 +9,10 @@ import { cn } from "@/lib/utils"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+})
 
 interface RootLayoutProps {
   children: React.ReactNode

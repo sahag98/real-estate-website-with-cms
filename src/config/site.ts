@@ -3,11 +3,11 @@ import { SiteConfig } from "@/types"
 import { env } from "@/env.mjs"
 
 export const siteConfig: SiteConfig = {
-  name: "Business Name",
+  name: "Your First Home Starts Here",
   author: "Doug's Tractor Works",
   logo: "/LOGO.png",
   description:
-    "Simple description about what you do and how that will help your clients.",
+    "Ready to buy or sell your first home? I’m here to guide you every step of the way with expert advice and personalized support.",
   keywords: ["Next.js", "React", "Tailwind CSS", "Radix UI", "shadcn/ui"],
   url: {
     base: env.NEXT_PUBLIC_APP_URL,

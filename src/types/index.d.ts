@@ -10,7 +10,6 @@ export type SiteConfig = {
   }
   links: {
     tel: string
-    github: string
   }
   ogImage: string
 }

@@ -15,12 +15,12 @@ const Process = () => {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              Our Process
+              My Proven Process
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              At Doug&apos;s Tractor Works, we follow a structured, efficient
-              process to ensure your outdoor spaces are transformed with
-              precision and care.
+              I follow a structured approach to ensure a smooth experience for
+              both first-time buyers and sellers, guiding you every step of the
+              way.
             </p>
           </div>
         </div>
@@ -28,30 +28,33 @@ const Process = () => {
           <div className="flex flex-col items-center justify-center space-y-4">
             <ClipboardIcon className="h-12 w-12 text-primary" />
             <div className="space-y-1 text-center">
-              <h3 className="text-xl font-bold">Consultation</h3>
-              <p className="text-muted-foreground">
-                We start by understanding your vision and needs, collaborating
-                closely to create a customized plan.
+              <h3 className="text-2xl font-bold">Consultation</h3>
+              <p className="text-muted-foreground md:text-lg">
+                I begin by understanding your unique needs and preferences,
+                ensuring we find the perfect property or buyer that fits your
+                goals.
               </p>
             </div>
           </div>
           <div className="flex flex-col items-center justify-center space-y-4">
             <WrenchIcon className="h-12 w-12 text-primary" />
             <div className="space-y-1 text-center">
-              <h3 className="text-xl font-bold">Implementation</h3>
-              <p className="text-muted-foreground">
-                Our experienced team executes the plan with precision, using
-                high-quality materials and techniques.
+              <h3 className="text-2xl font-bold">Execution</h3>
+              <p className="text-muted-foreground md:text-lg">
+                Using my expertise and market insights, I execute a well-planned
+                strategy to secure the best deals for buying or selling your
+                home.
               </p>
             </div>
           </div>
           <div className="flex flex-col items-center justify-center space-y-4">
             <CheckCheckIcon className="h-12 w-12 text-primary" />
             <div className="space-y-1 text-center">
-              <h3 className="text-xl font-bold">Maintenance</h3>
-              <p className="text-muted-foreground">
-                We provide ongoing maintenance and support to ensure your
-                outdoor spaces remain beautiful and functional.
+              <h3 className="text-2xl font-bold">Support</h3>
+              <p className="text-muted-foreground md:text-lg">
+                I offer ongoing support and expert advice, ensuring you&apos;re
+                confident and informed throughout the entire real estate
+                process.
               </p>
             </div>
           </div>

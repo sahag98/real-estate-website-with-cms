@@ -25,6 +25,7 @@ export default function Home() {
           <Image
             className="md:w-3/5"
             src={"/hero-img.jpeg"}
+            priority
             width={635}
             height={847}
             alt="Alan Reyes"
@@ -45,8 +46,11 @@ export default function Home() {
             {siteConfig.description}
           </p> */}
 
-          <div className="flex w-full flex-col gap-4 lg:flex-row">
-            <BlurInButton word="Find Your First Home" />
+          <div className="flex w-full flex-col gap-4 md:gap-6 lg:flex-row">
+            <BlurInButton
+              className="md:animate-buttonheartbeat"
+              word="Find Your First Home"
+            />
             <BlurInButton
               className="bg-secondary text-secondary-foreground"
               word="Ask About Selling"
@@ -74,7 +78,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="md:bg-about-img ext-foreground relative mt-10 flex w-full flex-col items-center justify-center bg-none px-0 md:mt-0 md:py-24 lg:flex-row lg:px-40 lg:py-20">
+      <div className="ext-foreground relative mt-10 flex w-full flex-col items-center justify-center bg-none px-0 md:mt-0 md:bg-about-img md:py-24 lg:flex-row lg:px-40 lg:py-20">
         <div className="absolute inset-0 h-full w-full bg-black/40" />
         <section className="z-10 flex flex-col gap-5 bg-secondary px-4 py-4 md:flex-row md:gap-0  md:px-0 md:py-0 md:pl-20">
           <div className="flex flex-1 flex-col items-start justify-center gap-5">

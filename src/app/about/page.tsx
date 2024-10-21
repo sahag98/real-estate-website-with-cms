@@ -8,11 +8,12 @@ import BlurInButton from "@/components/ui/blur-button"
 import BlurIn from "@/components/ui/blur-in"
 import { Button } from "@/components/ui/button"
 import Process from "@/components/process"
+import Stats from "@/components/stats"
 import Values from "@/components/values"
 
 const AboutPage = () => {
   return (
-    <div className=" flex min-h-screen flex-col items-start justify-between">
+    <div className="flex min-h-screen flex-col items-start justify-between">
       <div className="relative flex min-h-screen w-full flex-col items-center justify-between gap-4 pt-24 text-center md:flex-row-reverse md:gap-0 lg:h-screen">
         <div className="flex h-full flex-1 items-center justify-center bg-secondary p-4">
           <Image
@@ -23,7 +24,7 @@ const AboutPage = () => {
             alt="Alan Reyes"
           />
         </div>
-        <div className="relative flex h-full flex-1 flex-col items-start justify-center gap-8  px-4 md:px-12">
+        <div className="relative flex h-full flex-1 flex-col items-start justify-center gap-8 px-4 md:px-28">
           {/* <h1 className="w-full text-start text-5xl font-bold sm:text-5xl md:w-3/4 md:text-6xl  lg:text-7xl"> */}
           <BlurIn
             word="Nice to meet you"
@@ -70,8 +71,26 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+      <Stats />
       <Values />
-      {/* <Process /> */}
+      <Process />
+      <div className="relative mt-10 flex w-full flex-col items-center justify-center bg-none px-0 text-foreground md:mt-0 md:bg-about-img md:py-24 lg:flex-row lg:px-40 lg:py-20">
+        <div className="absolute inset-0 h-full w-full bg-black/40" />
+
+        <div className="z-10 flex flex-col items-center justify-center gap-7 bg-secondary px-4 py-16 text-center">
+          <h2 className="w-full text-2xl font-bold md:w-4/5 lg:text-5xl">
+            Ready to Find Your New Home?
+          </h2>
+          <p className="w-full font-medium md:w-4/5 md:text-lg">
+            Whether you&apos;re looking to buy your dream home or sell your
+            property, I&apos;m here to guide you every step of the way.
+            Let&apos;s make your real estate journey seamless and successful.
+          </p>
+          <Button className="text-base font-bold">Get Started Today</Button>
+        </div>
+
+        {/* <AboutImages /> */}
+      </div>
     </div>
   )
 }

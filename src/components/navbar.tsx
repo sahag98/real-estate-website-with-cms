@@ -73,16 +73,16 @@ const Navbar = () => {
             >
               About
             </Link>
-            <Link href={"#services"}>Services</Link>
-            <Link
+            <Link href={"/#expertise"}>Expertise</Link>
+            {/* <Link
               className={cn(
                 pathname === "/gallery" && " font-semibold text-primary"
               )}
               href={"/gallery"}
             >
               Gallery
-            </Link>
-            <Link href={"#faq"}>FAQ</Link>
+            </Link> */}
+            <Link href={"/#faq"}>FAQ</Link>
           </ul>
         </div>
       </div>

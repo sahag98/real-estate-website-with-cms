@@ -8,7 +8,7 @@ import {
 
 const Values = () => {
   return (
-    <section className="w-full bg-primary/25 py-12 md:py-24 lg:py-32">
+    <section className="w-full bg-secondary py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
@@ -17,18 +17,18 @@ const Values = () => {
             </h2>
           </div>
         </div>
-        <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-          <div className="flex flex-col items-center justify-center space-y-4 bg-secondary p-5">
+        <div className="grid items-center gap-3 py-12 md:gap-12 lg:grid-cols-3">
+          <div className="flex flex-col items-center justify-center space-y-4 bg-background p-5">
             <CheckCircle className="h-12 w-12 text-primary" />
             <div className="space-y-4 text-center">
               <h3 className="text-2xl font-bold">Transparency</h3>
               <p className="text-lg ">
-                I provide honest, transparent communication at every stage,
-                ensuring you stay informed throughout the process.
+                I provide transparent communication at every stage, ensuring you
+                stay informed throughout the process.
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center space-y-4 bg-secondary p-5">
+          <div className="flex flex-col items-center justify-center space-y-4 bg-background p-5">
             <HandshakeIcon className="h-12 w-12 text-primary" />
 
             <div className="space-y-4 text-center">
@@ -39,7 +39,7 @@ const Values = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center space-y-4 bg-secondary p-5">
+          <div className="flex flex-col items-center justify-center space-y-4 bg-background p-5">
             <ThumbsUpIcon className="h-12 w-12 text-primary" />
             <div className="space-y-4 text-center">
               <h3 className="text-2xl font-bold">Excellence</h3>

@@ -26,8 +26,8 @@ const Expertise = async () => {
 
   return (
     <div
-      id="services"
-      className="md:bg-expertise-img relative flex w-full flex-col items-center justify-center gap-10 bg-cover bg-center bg-no-repeat px-4 pb-24 pt-20 lg:px-40"
+      id="expertise"
+      className="relative flex w-full flex-col items-center justify-center gap-10 bg-cover bg-center bg-no-repeat px-4 pb-24 pt-20 md:bg-expertise-img lg:px-40"
     >
       <div className="absolute inset-0 h-full w-full bg-black/40" />
       <SectionHeader title="My Expertise" />

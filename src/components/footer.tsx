@@ -31,7 +31,7 @@ export default function Footer() {
               <Balancer>{siteConfig.description}</Balancer>
             </p>
             <Link href={`tel:${siteConfig.links.tel}`} target="_blank">
-              <Button className="text-base">Primary Action</Button>
+              <Button className="text-base font-bold">Get Started Today</Button>
             </Link>
           </div>
           <div className="flex flex-col gap-2 text-foreground">

@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "next/image"
+import { getFaqs } from "@/sanity/sanity-utils"
 
 import { cn } from "@/lib/utils"
 import {
@@ -11,34 +12,9 @@ import {
 
 import SectionHeader from "./section-header"
 
-const FAQ = () => {
-  const faqArray = [
-    {
-      id: 1,
-      question: "Question 1",
-      answer: "Simple answer to question 1",
-    },
-    {
-      id: 2,
-      question: "Question 2",
-      answer: "Simple answer to question 2",
-    },
-    {
-      id: 3,
-      question: "Question 3",
-      answer: "Simple answer to question 3",
-    },
-    {
-      id: 4,
-      question: "Question 4",
-      answer: "Simple answer to question 4",
-    },
-    {
-      id: 5,
-      question: "Question 5",
-      answer: "Simple answer to question 5",
-    },
-  ]
+const FAQ = async () => {
+  const faqs = await getFaqs()
+
   return (
     <div
       id="faq"
@@ -48,8 +24,8 @@ const FAQ = () => {
       <p className="text-lg">Here are some frequently asked questions.</p>
       <div className="flex w-full items-center justify-between gap-10">
         <Accordion className="flex-1" type="single" collapsible>
-          {faqArray.map((faq) => (
-            <AccordionItem key={faq.id} value={faq.question}>
+          {faqs.map((faq) => (
+            <AccordionItem key={faq._id} value={faq.question}>
               <AccordionTrigger className="text-lg">
                 {faq.question}
               </AccordionTrigger>

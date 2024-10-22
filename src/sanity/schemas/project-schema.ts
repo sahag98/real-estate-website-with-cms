@@ -4,15 +4,25 @@ const stat = {
   type: "document",
   fields: [
     {
-      name: "name",
-      title: "Name",
+      name: "currency",
+      title: "Currency",
+      type: "string",
+    },
+    {
+      name: "number",
+      title: "Number",
+      type: "number",
+    },
+    {
+      name: "amount",
+      title: "Amount",
       type: "string",
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: { source: "name" },
+      options: { source: "currency" },
     },
     {
       name: "description",

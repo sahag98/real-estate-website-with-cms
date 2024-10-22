@@ -7,8 +7,28 @@ import {
 } from "lucide-react"
 
 const Values = () => {
+  const values = [
+    {
+      icon: <CheckCircle className="h-12 w-12 text-primary" />,
+      title: "Transparency",
+      description:
+        "I provide transparent communication at every stage, ensuring you stay informed throughout the process.",
+    },
+    {
+      icon: <HandshakeIcon className="h-12 w-12 text-primary" />,
+      title: "Client-Centered",
+      description:
+        "Your goals come first. I tailor my services to fit your needs, offering personalized guidance whether buying or selling.",
+    },
+    {
+      icon: <ThumbsUpIcon className="h-12 w-12 text-primary" />,
+      title: "Excellence",
+      description:
+        "With strong market knowledge, I work to get you the best deal, whether buying your home or selling your property.",
+    },
+  ]
   return (
-    <section className="w-full bg-secondary py-12 md:py-24 lg:py-32">
+    <section className="w-full bg-[#1c1c1c] py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
@@ -17,38 +37,21 @@ const Values = () => {
             </h2>
           </div>
         </div>
-        <div className="grid items-center gap-3 py-12 md:gap-12 lg:grid-cols-3">
-          <div className="flex flex-col items-center justify-center space-y-4 bg-background p-5">
-            <CheckCircle className="h-12 w-12 text-primary" />
-            <div className="space-y-4 text-center">
-              <h3 className="text-2xl font-bold">Transparency</h3>
-              <p className="text-lg ">
-                I provide transparent communication at every stage, ensuring you
-                stay informed throughout the process.
+        <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8">
+          {values.map((value, index) => (
+            <div
+              key={index}
+              className="rounded-lg bg-background p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className="mb-4 flex justify-center">{value.icon}</div>
+              <h3 className="mb-3 text-center text-xl font-bold text-foreground md:text-2xl">
+                {value.title}
+              </h3>
+              <p className="text-center text-foreground/50 md:text-lg">
+                {value.description}
               </p>
             </div>
-          </div>
-          <div className="flex flex-col items-center justify-center space-y-4 bg-background p-5">
-            <HandshakeIcon className="h-12 w-12 text-primary" />
-
-            <div className="space-y-4 text-center">
-              <h3 className="text-2xl font-bold">Client-Centered</h3>
-              <p className="text-lg">
-                Your goals come first. I tailor my services to fit your needs,
-                offering personalized guidance whether buying or selling.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center space-y-4 bg-background p-5">
-            <ThumbsUpIcon className="h-12 w-12 text-primary" />
-            <div className="space-y-4 text-center">
-              <h3 className="text-2xl font-bold">Excellence</h3>
-              <p className="text-lg">
-                With strong market knowledge, I work to get you the best deal,
-                whether buying your home or selling your property.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

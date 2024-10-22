@@ -5,8 +5,8 @@ import { env } from "@/env.mjs"
 import { seoTerms } from "./seo"
 
 export const siteConfig: SiteConfig = {
-  name: "Your First Home Starts Here",
-  author: "Doug's Tractor Works",
+  name: "Alan Reyes | Your First Home Starts Here",
+  author: "Alan Reyes",
   logo: "/LOGO.png",
   description:
     "Ready to buy or sell your first home? I'm here to guide you every step of the way with expert advice and personalized support.",

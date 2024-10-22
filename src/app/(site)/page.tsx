@@ -4,6 +4,7 @@ import { Link } from "next-view-transitions"
 import { siteConfig } from "@/config/site"
 import BlurInButton from "@/components/ui/blur-button"
 import BlurIn from "@/components/ui/blur-in"
+import AboutHome from "@/components/about-home"
 import Expertise from "@/components/expertise"
 import FAQ from "@/components/faq"
 
@@ -24,7 +25,7 @@ export default function Home() {
         <div className="relative flex h-full flex-1 flex-col items-start justify-center gap-4  px-4 md:px-12">
           {/* <h1 className="w-full text-start text-5xl font-bold sm:text-5xl md:w-3/4 md:text-6xl  lg:text-7xl"> */}
           <BlurIn
-            word={siteConfig.name}
+            word={siteConfig.name.split("|")[1]}
             className="w-full text-start text-5xl font-bold sm:text-5xl md:w-3/4 md:text-6xl  lg:text-7xl"
           />
           {/* </h1> */}
@@ -68,37 +69,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="ext-foreground relative mt-10 flex w-full flex-col items-center justify-center bg-none px-0 md:mt-0 md:bg-about-img md:py-24 lg:flex-row lg:px-40 lg:py-20">
-        <div className="absolute inset-0 h-full w-full bg-black/40" />
-        <section className="z-10 flex flex-col gap-5 bg-secondary px-4 py-4 md:flex-row md:gap-0  md:px-0 md:py-0 md:pl-20">
-          <div className="flex flex-1 flex-col items-start justify-center gap-5">
-            <h2 className="w-full text-2xl font-bold md:w-4/5 lg:text-5xl">
-              Making Your First Home a Reality
-            </h2>
-            <p className="w-full font-medium md:w-4/5">
-              With years of experience helping first-time buyers and sellers,
-              I&apos;m passionate about making the real estate process simple. I
-              work closely with you to ensure you feel informed and confident
-              every step of the way.
-            </p>
-            <Link
-              href={"/about"}
-              className="mb-3 font-bold text-primary underline"
-            >
-              Learn More
-            </Link>
-          </div>
-          <Image
-            src={"/about-placeholder.png"}
-            width={1000}
-            height={1000}
-            alt="about placeholder"
-            className="flex-1 object-cover lg:w-1/2"
-          />
-        </section>
-
-        {/* <AboutImages /> */}
-      </div>
+      <AboutHome />
       {/* <Services /> */}
       <Expertise />
       <FAQ />

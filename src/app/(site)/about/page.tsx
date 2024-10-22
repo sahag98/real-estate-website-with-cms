@@ -57,21 +57,6 @@ const AboutPage = async () => {
               word="Ask About Selling"
             />
           </div> */}
-          <div className="absolute bottom-5 flex  flex-row justify-between gap-5 self-end">
-            {/* <section className="flex w-3/4 flex-col items-start gap-1">
-              <p className=" text-left text-sm">
-                Through wisdom is an house builded; and by understanding it is
-                established: And by knowledge shall the chambers be filled with
-                all precious and pleasant riches."
-              </p>
-              <p className="text-left text-sm">- Proverbs 24:3-4</p>
-            </section> */}
-            <Link target="_blank" href={""}>
-              <Button variant={"secondary"} size="icon">
-                <Instagram className="" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </div>
       <Stats stats={stats} />

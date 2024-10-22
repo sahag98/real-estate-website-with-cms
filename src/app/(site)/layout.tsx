@@ -3,6 +3,7 @@ import "@/styles/globals.css"
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
 import { ViewTransitions } from "next-view-transitions"
+import NextTopLoader from "nextjs-toploader"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             inter.className
           )}
         >
+          <NextTopLoader color="#FFD800" />
           <Navbar />
           {children}
           <Footer />

@@ -44,27 +44,21 @@ export default function Footer() {
             </Link>
             <Link
               className="text-lg font-medium underline underline-offset-2"
-              href="#services"
-            >
-              Services
-            </Link>
-            <Link
-              className="text-lg font-medium underline underline-offset-2"
               href="/about"
             >
               About
             </Link>
             <Link
               className="text-lg font-medium underline underline-offset-2"
-              href="/gallery"
+              href="#expertise"
             >
-              Gallery
+              Expertise
             </Link>
             <Link
               className="text-lg font-medium underline underline-offset-2"
               href="#faq"
             >
-              Gallery
+              Faq
             </Link>
           </div>
           {/* <div className="flex flex-col gap-2 text-foreground">

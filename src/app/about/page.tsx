@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { getStats } from "@/sanity/sanity-utils"
 import { Instagram } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
@@ -11,7 +12,9 @@ import Process from "@/components/process"
 import Stats from "@/components/stats"
 import Values from "@/components/values"
 
-const AboutPage = () => {
+const AboutPage = async () => {
+  const stats = await getStats()
+
   return (
     <div className="flex min-h-screen flex-col items-start justify-between">
       <div className="relative flex min-h-screen w-full flex-col items-center justify-between gap-4 pt-24 text-center md:flex-row-reverse md:gap-0 lg:h-screen">
@@ -71,7 +74,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <Stats />
+      <Stats stats={stats} />
       <Values />
       <Process />
       <div className="relative mt-10 flex w-full flex-col items-center justify-center bg-none px-0 text-foreground md:mt-0 md:bg-about-img md:py-24 lg:flex-row lg:px-40 lg:py-20">

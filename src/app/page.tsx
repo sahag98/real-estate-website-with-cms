@@ -1,21 +1,11 @@
 import Image from "next/image"
-import { Instagram } from "lucide-react"
 import { Link } from "next-view-transitions"
 
 import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import AnimatedShinyText from "@/components/ui/animated-shiny-text"
 import BlurInButton from "@/components/ui/blur-button"
 import BlurIn from "@/components/ui/blur-in"
-import { Button, buttonVariants } from "@/components/ui/button"
-import AboutImages from "@/components/about-images"
 import Expertise from "@/components/expertise"
 import FAQ from "@/components/faq"
-import Footer from "@/components/footer"
-import { Icons } from "@/components/icons"
-import { ModeToggle } from "@/components/mode-toggle"
-import Services from "@/components/services"
-import Tractor from "@/components/tractor"
 
 export default function Home() {
   return (

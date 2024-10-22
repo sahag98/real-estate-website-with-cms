@@ -72,9 +72,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             inter.className
           )}
         >
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </body>
       </html>
     </ViewTransitions>

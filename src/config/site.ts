@@ -5,7 +5,7 @@ import { env } from "@/env.mjs"
 import { seoTerms } from "./seo"
 
 export const siteConfig: SiteConfig = {
-  name: "Alan Reyes | Your First Home Starts Here",
+  name: "Alan Reyes | Rise Real Estate",
   author: "Alan Reyes",
   logo: "/LOGO.png",
   description:

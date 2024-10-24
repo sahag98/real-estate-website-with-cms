@@ -7,6 +7,7 @@ import BlurIn from "@/components/ui/blur-in"
 import AboutHome from "@/components/about-home"
 import Expertise from "@/components/expertise"
 import FAQ from "@/components/faq"
+import Reviews from "@/components/reviews"
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
         <div className="relative flex h-full flex-1 flex-col items-start justify-center gap-4  px-4 md:px-12">
           {/* <h1 className="w-full text-start text-5xl font-bold sm:text-5xl md:w-3/4 md:text-6xl  lg:text-7xl"> */}
           <BlurIn
-            word={siteConfig.name.split("|")[1]}
+            word={"Your First Home Starts Here"}
             className="w-full text-start text-5xl font-bold sm:text-5xl md:w-3/4 md:text-6xl  lg:text-7xl"
           />
           {/* </h1> */}
@@ -71,6 +72,7 @@ export default function Home() {
       </div>
       <AboutHome />
       {/* <Services /> */}
+      <Reviews />
       <Expertise />
       <FAQ />
     </main>

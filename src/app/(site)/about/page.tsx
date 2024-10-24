@@ -1,4 +1,5 @@
 import React from "react"
+import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { getStats } from "@/sanity/sanity-utils"
@@ -11,6 +12,12 @@ import { Button } from "@/components/ui/button"
 import Process from "@/components/process"
 import Stats from "@/components/stats"
 import Values from "@/components/values"
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "With years of experience helping first-time buyers and sellers, I'm passionate about making the real estate process simple. I work closely with you to ensure you feel informed and confident every step of the way.",
+}
 
 const AboutPage = async () => {
   const stats = await getStats()

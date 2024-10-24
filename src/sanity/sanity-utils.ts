@@ -41,6 +41,24 @@ export type StatInfo = {
   image: string
 }
 
+export type BlogInfo = {
+  _id: string
+  _createdAt: Date
+  title: string
+  summary: string
+  image: string
+  content: string
+}
+
+export type SingleBlog = {
+  _id: string
+  _createdAt: Date
+  title: string
+  summary: string
+  image: string
+  content: PortableTextBlock[]
+}
+
 export async function getStats(): Promise<Stat[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "stat"]| order(_createdAt asc){
@@ -105,6 +123,53 @@ export async function getStatInfo(): Promise<StatInfo[]> {
      "image": image.asset->url,
     }`,
     {},
+    { useCdn: true }
+  )
+}
+
+export async function getBlogs(): Promise<BlogInfo[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "blog"]| order(_createdAt desc){
+      _id,
+      _createdAt,
+      title,
+      summary,
+     "image": image.asset->url,
+      content
+    }`,
+    {},
+    { useCdn: true }
+  )
+}
+
+export async function getBlogBySearch(
+  title: string
+): Promise<SingleBlog | null> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "blog" && title == $title][0]{
+      _id,
+      _createdAt,
+      title,
+      summary,
+      "image": image.asset->url,
+      content
+    }`,
+    { title },
+    { useCdn: true }
+  )
+}
+
+export async function getSingleBlog(id: string): Promise<SingleBlog | null> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "blog" && _id == $id][0]{
+      _id,
+      _createdAt,
+      title,
+      summary,
+      "image": image.asset->url,
+      content
+    }`,
+    { id },
     { useCdn: true }
   )
 }

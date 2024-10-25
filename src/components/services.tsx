@@ -1,6 +1,5 @@
 import React from "react"
 import Image from "next/image"
-import { servicesData } from "@/data/data-services"
 
 import PropertyCard from "./property-card"
 import SectionHeader from "./section-header"

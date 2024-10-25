@@ -19,9 +19,9 @@ const Navbar = () => {
         <Link href={"/"}>
           <Image
             src={siteConfig.logo}
-            width={492}
-            className="w-24 md:w-44"
-            height={248}
+            width={456}
+            className="w-16 md:w-20"
+            height={548}
             priority
             alt="dougs tractor works logo"
           />

@@ -7,7 +7,7 @@ import { seoTerms } from "./seo"
 export const siteConfig: SiteConfig = {
   name: "Alan Reyes | Rise Real Estate",
   author: "Alan Reyes",
-  logo: "/LOGO.png",
+  logo: "/site-logo.png",
   description:
     "Ready to buy or sell your first home? I'm here to guide you every step of the way with expert advice and personalized support.",
   keywords: seoTerms,

@@ -25,8 +25,8 @@ export default async function PropertySuccessStories() {
             Property Success Stories
           </h2>
           <p className="max-w-[900px]  md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Discover how we've helped our clients find their dream homes, make
-            smart investments, and transform properties.
+            Discover how we&apos;ve helped our clients find their dream homes,
+            make smart investments, and transform properties.
           </p>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -44,7 +44,6 @@ export default async function PropertySuccessStories() {
               </CardHeader>
               <CardFooter className="px-2 py-3">
                 <VideoDialog video={story.video} />
-                {/* <Button>Watch Video</Button> */}
               </CardFooter>
             </Card>
           ))}

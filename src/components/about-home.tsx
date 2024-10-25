@@ -3,6 +3,10 @@ import Image from "next/image"
 import { getAboutHome } from "@/sanity/sanity-utils"
 import { Link } from "next-view-transitions"
 
+import { cn } from "@/lib/utils"
+
+import { buttonVariants } from "./ui/button"
+
 const AboutHome = async () => {
   const aboutHomeData = await getAboutHome()
 
@@ -17,12 +21,17 @@ const AboutHome = async () => {
           <p className="w-full font-medium md:w-4/5">
             {aboutHomeData[0]?.description}
           </p>
-          <Link
-            href={"/about"}
-            className="mb-3 font-bold text-primary underline"
-          >
-            Learn More
-          </Link>
+          <div className="flex w-full items-center gap-4 md:flex-row">
+            <Link
+              href={"/about"}
+              className={cn(buttonVariants(), "text-base font-bold")}
+            >
+              Learn More
+            </Link>
+            <Link href={"/blog"} className=" font-bold text-primary underline">
+              Check out my blogs
+            </Link>
+          </div>
         </div>
         <Image
           src={aboutHomeData[0]?.image}

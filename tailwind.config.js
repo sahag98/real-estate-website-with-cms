@@ -19,7 +19,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "about-img": "url(/about-bg.jpg)",
-        "expertise-img": "url(/expertise-img.jpg)",
+        "expertise-img": "url(/expertise-bg.JPG)",
         "about-cta": "url(/about-cta.jpg)",
       },
       colors: {

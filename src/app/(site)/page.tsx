@@ -8,6 +8,7 @@ import AboutHome from "@/components/about-home"
 import Expertise from "@/components/expertise"
 import FAQ from "@/components/faq"
 import Reviews from "@/components/reviews"
+import PropertySuccessStories from "@/components/success-stories"
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
           {/* </h1> */}
           <BlurIn
             word={siteConfig.description}
-            className="r max-w-[42rem] text-start text-base leading-normal text-muted-foreground sm:text-xl sm:leading-8"
+            className="r max-w-[42rem] text-start text-base leading-normal text-foreground/75 sm:text-xl sm:leading-8"
           />
           {/* <p className="r max-w-[42rem] text-start leading-normal text-muted-foreground sm:text-xl sm:leading-8">
             {siteConfig.description}
@@ -74,6 +75,7 @@ export default function Home() {
       {/* <Services /> */}
       <Reviews />
       <Expertise />
+      <PropertySuccessStories />
       <FAQ />
     </main>
   )

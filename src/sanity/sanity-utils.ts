@@ -1,63 +1,16 @@
 import { createClient, groq, PortableTextBlock } from "next-sanity"
 
 import clientConfig from "./config/client-config"
-
-export type Stat = {
-  _id: string
-  createdAt: Date
-  currency: string
-  number: number
-  amount: string
-  slug: string
-  description: string
-  image: string
-}
-
-export type Expertise = {
-  _id: string
-  createdAt: Date
-  name: string
-  description: string
-}
-
-export type Faq = {
-  _id: string
-  createdAt: Date
-  question: string
-  answer: string
-}
-
-export type AboutHome = {
-  _id: string
-  createdAt: Date
-  title: string
-  description: string
-  image: string
-}
-export type StatInfo = {
-  _id: string
-  createdAt: Date
-  title: string
-  image: string
-}
-
-export type BlogInfo = {
-  _id: string
-  _createdAt: Date
-  title: string
-  summary: string
-  image: string
-  content: string
-}
-
-export type SingleBlog = {
-  _id: string
-  _createdAt: Date
-  title: string
-  summary: string
-  image: string
-  content: PortableTextBlock[]
-}
+import {
+  AboutHome,
+  BlogInfo,
+  Expertise,
+  Faq,
+  SingleBlog,
+  Stat,
+  StatInfo,
+  SuccessStories,
+} from "./types"
 
 export async function getStats(): Promise<Stat[]> {
   return createClient(clientConfig).fetch(
@@ -170,6 +123,20 @@ export async function getSingleBlog(id: string): Promise<SingleBlog | null> {
       content
     }`,
     { id },
+    { useCdn: true }
+  )
+}
+
+export async function getSuccessStories(): Promise<SuccessStories[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "success"]{
+      _id,
+      _createdAt,
+      title,
+      "image": image.asset->url,
+      "video": video.asset->url,
+    }`,
+    {},
     { useCdn: true }
   )
 }

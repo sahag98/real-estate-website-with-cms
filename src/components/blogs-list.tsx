@@ -2,7 +2,7 @@
 
 import React, { useMemo, useState } from "react"
 import Image from "next/image"
-import { BlogInfo } from "@/sanity/sanity-utils"
+import { BlogInfo } from "@/sanity/types"
 import { Search } from "lucide-react"
 import moment from "moment"
 import { Link } from "next-view-transitions"
@@ -58,7 +58,7 @@ const BlogsList = ({ blogs }: { blogs: BlogInfo[] }) => {
         <p className="mb-4 font-medium text-foreground/85">{blog.summary}</p>
       </CardContent>
       <CardFooter className="flex items-end justify-between p-3 pt-0">
-        <Button asChild>
+        <Button className="text-base font-bold" asChild>
           <Link href={`/blog/${blog._id}`}>Read More</Link>
         </Button>
         <p className="text-sm ">{moment(blog._createdAt).fromNow()}</p>
@@ -88,34 +88,8 @@ const BlogsList = ({ blogs }: { blogs: BlogInfo[] }) => {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {exactMatch
             ? renderBlogCard(exactMatch)
-            : filteredBlogs.slice(0, 6).map(renderBlogCard)}
+            : filteredBlogs.map(renderBlogCard)}
         </div>
-      )}
-      {blogs.length > 3 && (
-        <Pagination className="mt-7">
-          <PaginationContent>
-            <PaginationItem>
-              <PaginationPrevious href="#" />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink isActive href="#">
-                1
-              </PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href="#">2</PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink href="#">3</PaginationLink>
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationEllipsis />
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationNext href="#" />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
       )}
     </>
   )

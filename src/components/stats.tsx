@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { getStatInfo, Stat } from "@/sanity/sanity-utils"
+import { getStatInfo } from "@/sanity/sanity-utils"
+import { Stat } from "@/sanity/types"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 

@@ -58,14 +58,16 @@ const Navbar = () => {
           )}
           id="navbar-default"
         >
-          <ul className="mt-4 flex flex-col space-y-10 rounded-lg border  md:mt-0 md:flex-row md:space-x-10 md:space-y-0 md:border-0 md:p-0  rtl:space-x-reverse">
+          <ul className="mt-4 flex flex-col space-y-10 rounded-lg border bg-secondary p-4  md:mt-0  md:flex-row md:space-x-10 md:space-y-0 md:border-0 md:bg-background md:p-0  rtl:space-x-reverse">
             <Link
+              onClick={() => setNavOpen(false)}
               className={cn(pathname === "/" && " font-semibold text-primary")}
               href={"/"}
             >
               Home
             </Link>
             <Link
+              onClick={() => setNavOpen(false)}
               className={cn(
                 pathname === "/about" && " font-semibold text-primary"
               )}
@@ -73,8 +75,11 @@ const Navbar = () => {
             >
               About
             </Link>
-            <Link href={"/#expertise"}>Expertise</Link>
+            <Link onClick={() => setNavOpen(false)} href={"/#expertise"}>
+              Expertise
+            </Link>
             <Link
+              onClick={() => setNavOpen(false)}
               className={cn(
                 pathname === "/blog" && " font-semibold text-primary"
               )}
@@ -90,7 +95,9 @@ const Navbar = () => {
             >
               Gallery
             </Link> */}
-            <Link href={"/#faq"}>FAQ</Link>
+            <Link onClick={() => setNavOpen(false)} href={"/#faq"}>
+              FAQ
+            </Link>
           </ul>
         </div>
       </div>

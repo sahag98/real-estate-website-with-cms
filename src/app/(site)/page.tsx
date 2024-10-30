@@ -40,11 +40,13 @@ export default function Home() {
             {siteConfig.description}
           </p> */}
 
-          <div className="flex w-full flex-col gap-4 md:gap-6 lg:flex-row">
-            <BlurInButton
-              className="md:animate-buttonheartbeat"
-              word="Find Your First Home"
-            />
+          <div className="flex w-full flex-col gap-3 md:gap-6 lg:flex-row">
+            <Link className="" href={"#properties"}>
+              <BlurInButton
+                className="w-full md:animate-buttonheartbeat"
+                word="Find Your First Home"
+              />
+            </Link>
             <BlurInButton
               className="bg-secondary text-secondary-foreground"
               word="Ask About Selling"

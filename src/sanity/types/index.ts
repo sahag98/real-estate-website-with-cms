@@ -68,6 +68,23 @@ export type SuccessStories = {
 export type Reviews = {
   _id: string
   _createdAt: Date
-  title: string
+  name: string
   content: string
+}
+
+export type Properties = {
+  _id: string
+  _createdAt: Date
+  title: string
+  images: any[]
+  amount: string
+  address: string
+  slug: string
+  description: string
+  status: string
+  bedrooms: string
+  bathrooms: string
+  parking: string
+  space: string
+  features: string[]
 }

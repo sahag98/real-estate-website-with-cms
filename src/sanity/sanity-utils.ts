@@ -6,6 +6,7 @@ import {
   BlogInfo,
   Expertise,
   Faq,
+  Properties,
   Reviews,
   SingleBlog,
   Stat,
@@ -151,6 +152,59 @@ export async function getReviews(): Promise<Reviews[]> {
       content,
     }`,
     {},
+    { useCdn: true }
+  )
+}
+
+export async function getProperties(): Promise<Properties[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "property"]{
+      _id,
+      _createdAt,
+      title,
+     images[]{
+        "url": asset->url,
+        alt
+      },
+      amount,
+      address,
+      "slug":slug.current,
+      description,
+      status,
+      bedrooms,
+      bathrooms,
+      parking,
+      space,
+      features
+    }`,
+    {},
+    { useCdn: true }
+  )
+}
+
+export async function getSingleProperty(slug: string): Promise<Properties> {
+  console.log("fetch slug: ", slug)
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "property" && slug.current == $slug][0]{
+       _id,
+      _createdAt,
+      title,
+     images[]{
+        "url": asset->url,
+        alt
+      },
+      amount,
+      address,
+      "slug":slug.current,
+      description,
+      status,
+      bedrooms,
+      bathrooms,
+      parking,
+      space,
+      features
+    }`,
+    { slug },
     { useCdn: true }
   )
 }

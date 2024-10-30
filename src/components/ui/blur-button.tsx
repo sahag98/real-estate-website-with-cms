@@ -32,7 +32,7 @@ const BlurInButton = ({
       transition={{ duration }}
       variants={combinedVariants}
       className={cn(
-        "flex h-10 items-center justify-center bg-primary px-4 py-2 text-center text-lg font-bold text-primary-foreground drop-shadow-sm",
+        "flex h-12 items-center justify-center bg-primary px-4 py-2 text-center text-lg font-bold text-primary-foreground drop-shadow-sm",
         className
       )}
     >

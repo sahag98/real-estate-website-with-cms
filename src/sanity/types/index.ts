@@ -64,3 +64,10 @@ export type SuccessStories = {
   image: string
   video: string
 }
+
+export type Reviews = {
+  _id: string
+  _createdAt: Date
+  title: string
+  content: string
+}

@@ -7,6 +7,7 @@ import BlurIn from "@/components/ui/blur-in"
 import AboutHome from "@/components/about-home"
 import Expertise from "@/components/expertise"
 import FAQ from "@/components/faq"
+import PropertyListings from "@/components/property-list"
 import Reviews from "@/components/reviews"
 import PropertySuccessStories from "@/components/success-stories"
 
@@ -73,8 +74,9 @@ export default function Home() {
       </div>
       <AboutHome />
       {/* <Services /> */}
-      <Reviews />
+      <PropertyListings />
       <Expertise />
+      <Reviews />
       <PropertySuccessStories />
       <FAQ />
     </main>

@@ -6,6 +6,7 @@ import {
   BlogInfo,
   Expertise,
   Faq,
+  Reviews,
   SingleBlog,
   Stat,
   StatInfo,
@@ -135,6 +136,19 @@ export async function getSuccessStories(): Promise<SuccessStories[]> {
       title,
       "image": image.asset->url,
       "video": video.asset->url,
+    }`,
+    {},
+    { useCdn: true }
+  )
+}
+
+export async function getReviews(): Promise<Reviews[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "review"]{
+      _id,
+      _createdAt,
+      name,
+      content,
     }`,
     {},
     { useCdn: true }

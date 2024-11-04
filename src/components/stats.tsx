@@ -7,8 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import NumberTicker from "./ui/number-ticker"
 
 export default async function Stats({ stats }: { stats: Stat[] }) {
-  console.log("stat: ", stats)
-
   const statInfo = await getStatInfo()
 
   return (

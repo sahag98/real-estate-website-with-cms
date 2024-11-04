@@ -6,8 +6,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 export default async function Component() {
   const reviews = await getReviews()
 
-  console.log(reviews)
-
   return (
     <section className="w-full bg-[#1c1c1c] py-12 md:py-24 lg:py-32">
       <div className="px-4 md:container">

@@ -1,4 +1,4 @@
-import { createClient, groq, PortableTextBlock } from "next-sanity"
+import { createClient, groq } from "next-sanity"
 
 import clientConfig from "./config/client-config"
 import {
@@ -183,7 +183,6 @@ export async function getProperties(): Promise<Properties[]> {
 }
 
 export async function getSingleProperty(slug: string): Promise<Properties> {
-  console.log("fetch slug: ", slug)
   return createClient(clientConfig).fetch(
     groq`*[_type == "property" && slug.current == $slug][0]{
        _id,
@@ -207,4 +206,19 @@ export async function getSingleProperty(slug: string): Promise<Properties> {
     { slug },
     { useCdn: true }
   )
+}
+
+export async function createSanityMessage(message: {
+  name: string
+  email: string
+  phone: string
+  message: string
+}) {
+  return createClient(clientConfig).create({
+    _type: "message",
+    name: message.name,
+    email: message.email,
+    phone: message.phone,
+    message: message.message,
+  })
 }

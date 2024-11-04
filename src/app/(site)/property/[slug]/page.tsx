@@ -27,7 +27,10 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import MessageForm from "@/components/message-form"
 import PropertyImages from "@/components/property-images"
+
+import { createMessage } from "./message-action"
 
 interface Property {
   id: number
@@ -145,28 +148,7 @@ export default async function PropertyDetail({
                   alan@therise.group
                 </div>
               </div>
-              <form className="space-y-4">
-                <Input
-                  className="border-foreground/50 placeholder:text-foreground/50"
-                  placeholder="Your Name"
-                />
-                <Input
-                  className="border-foreground/50 placeholder:text-foreground/50"
-                  placeholder="Your Email"
-                  type="email"
-                />
-                <Input
-                  className="border-foreground/50 placeholder:text-foreground/50"
-                  placeholder="Your Phone"
-                  type="tel"
-                />
-                <Textarea
-                  className="resize-none border-foreground/50 placeholder:text-foreground/50"
-                  placeholder="Your Message"
-                  rows={4}
-                />
-                <Button className="w-full font-bold">Send Message</Button>
-              </form>
+              <MessageForm slug={slug} />
             </CardContent>
           </Card>
         </div>

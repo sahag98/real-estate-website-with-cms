@@ -53,7 +53,9 @@ const AboutPage = async () => {
             voluptates hic, repudiandae nisi. Praesentium, repudiandae!"
             className="text-start text-xl text-muted-foreground"
           />
-          <BlurInButton word="Get in Touch" />
+          <Link href={`tel:${siteConfig.links.tel}`}>
+            <BlurInButton word="Get in Touch" />
+          </Link>
           {/* <p className="r max-w-[42rem] text-start leading-normal text-muted-foreground sm:text-xl sm:leading-8">
             {siteConfig.description}
           </p> */}
@@ -81,7 +83,9 @@ const AboutPage = async () => {
             property, I&apos;m here to guide you every step of the way.
             Let&apos;s make your real estate journey seamless and successful.
           </p>
-          <Button className="text-base font-bold">Get Started Today</Button>
+          <Link href={"/#properties"}>
+            <Button className="text-base font-bold">Get Started Today</Button>
+          </Link>
         </div>
 
         {/* <AboutImages /> */}

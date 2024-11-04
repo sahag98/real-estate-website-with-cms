@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
     author: "Sahak Arzoumanian",
   },
   links: {
-    tel: "310-850-9926",
+    tel: "661-992-4668",
   },
   ogImage: `${env.NEXT_PUBLIC_APP_URL}/og.jpg`,
 }

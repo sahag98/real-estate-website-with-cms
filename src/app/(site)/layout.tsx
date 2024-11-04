@@ -7,6 +7,7 @@ import NextTopLoader from "nextjs-toploader"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { Toaster } from "@/components/ui/toaster"
 import Footer from "@/components/footer"
 import Navbar from "@/components/navbar"
 
@@ -76,7 +77,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <NextTopLoader color="#FFD800" />
           <Navbar />
           {children}
+
           <Footer />
+          <Toaster />
         </body>
       </html>
     </ViewTransitions>

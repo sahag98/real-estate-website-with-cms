@@ -88,3 +88,13 @@ export type Properties = {
   space: string
   features: string[]
 }
+
+export interface Message {
+  _id: string
+  _createdAt: Date
+  name: string
+  email: string
+  phone: string
+  message: string
+  slug: string
+}

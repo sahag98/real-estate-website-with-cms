@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { getHeroImg } from "@/sanity/sanity-utils"
 import { Link } from "next-view-transitions"
 
 import { siteConfig } from "@/config/site"
@@ -11,14 +12,17 @@ import PropertyListings from "@/components/property-list"
 import Reviews from "@/components/reviews"
 import PropertySuccessStories from "@/components/success-stories"
 
-export default function Home() {
+export default async function Home() {
+  const heroImg = await getHeroImg()
+
+  console.log("hero img: ", heroImg[0].image)
   return (
     <main className="relative mt-10 flex min-h-screen flex-col items-center justify-center md:mt-0">
       <div className="relative flex min-h-screen w-full flex-col-reverse items-center justify-between gap-4 pt-24 text-center md:flex-row md:gap-0 lg:h-screen">
         <div className="flex h-full flex-1 items-center justify-center bg-[#212121] p-4">
           <Image
             className="md:w-3/5"
-            src={"/hero-img.jpeg"}
+            src={heroImg[0].image}
             priority
             width={635}
             height={847}

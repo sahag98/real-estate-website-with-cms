@@ -69,6 +69,17 @@ export async function getAboutHome(): Promise<AboutHome[]> {
   )
 }
 
+export async function getHeroImg(): Promise<{ _id: string; image: string }[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "hero"]{
+      _id,
+     "image": image.asset->url,
+    }`,
+    {},
+    { useCdn: true }
+  )
+}
+
 export async function getStatInfo(): Promise<StatInfo[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "statinfo"]{

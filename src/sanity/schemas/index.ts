@@ -2,6 +2,7 @@ import aboutHome from "./about-home-schema"
 import blog from "./blog-schema"
 import expertise from "./expertise-schema"
 import faq from "./faq-schema"
+import hero from "./hero-schema"
 import message from "./message-schema"
 import stat from "./project-schema"
 import property from "./property-schema"
@@ -20,6 +21,7 @@ const schemas = [
   review,
   property,
   message,
+  hero,
 ]
 
 export default schemas

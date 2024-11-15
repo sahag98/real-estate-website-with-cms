@@ -81,13 +81,19 @@ export default function Footer() {
         </div>
         <div className="not-prose flex flex-col justify-between gap-6 border-t border-t-foreground pt-5 md:flex-row md:items-center md:gap-2">
           <div className="flex gap-2">
-            <Link target="_blank" href={""}>
+            <Link
+              target="_blank"
+              href={"https://www.instagram.com/reyesrealty7"}
+            >
               <Button size="icon">
                 <Instagram className="" />
               </Button>
             </Link>
 
-            <Link target="_blank" href={""}>
+            <Link
+              target="_blank"
+              href={"https://www.facebook.com/profile.php?id=100089914718816"}
+            >
               <Button size="icon">
                 <Facebook className="" />
               </Button>

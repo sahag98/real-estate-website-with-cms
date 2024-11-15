@@ -15,11 +15,13 @@ export const EmailTemplate = ({
   email,
   phone,
   message,
+  property,
 }: {
   name: string
   email: string
   phone: string
   message: string
+  property: string
 }) => {
   return (
     <Html>
@@ -31,6 +33,7 @@ export const EmailTemplate = ({
             <Heading className="mx-0 my-[10px] p-0 text-center text-[28px] font-bold text-black">
               New Message for Property Listing
             </Heading>
+            <Text>Property: {property}</Text>
             <Text>Email: {email}</Text>
             <Text>Name: {name}</Text>
             <Text>Phone number: {phone}</Text>

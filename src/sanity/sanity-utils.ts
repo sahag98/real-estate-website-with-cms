@@ -220,6 +220,7 @@ export async function getSingleProperty(slug: string): Promise<Properties> {
 }
 
 export async function createSanityMessage(message: {
+  propertyName: string
   name: string
   email: string
   phone: string
@@ -227,6 +228,7 @@ export async function createSanityMessage(message: {
 }) {
   return createClient(clientConfig).create({
     _type: "message",
+    propertyName: message.propertyName,
     name: message.name,
     email: message.email,
     phone: message.phone,

@@ -9,9 +9,14 @@ import { EmailTemplate } from "@/components/email-template"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-export async function createMessage(formData: FormData, slug: any) {
+export async function createMessage(
+  formData: FormData,
+  slug: string,
+  name: string
+) {
   try {
     const newMessage = {
+      propertyName: name,
       name: formData.get("name") as string,
       email: formData.get("email") as string,
       phone: formData.get("phone") as string,
@@ -30,13 +35,14 @@ export async function createMessage(formData: FormData, slug: any) {
 
     const { data, error } = await resend.emails.send({
       from: `Website <alan@alanreyesrealty.com>`,
-      to: ["alan@therise.group"],
+      to: ["arzsahag@gmail.com"],
       cc: ["sahagking@gmail.com"],
       subject: "New Message for Property",
       react: EmailTemplate({
         name: newMessage.name,
         phone: newMessage.phone,
         email: newMessage.email,
+        property: name,
         message: newMessage.message,
       }),
     })

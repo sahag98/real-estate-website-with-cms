@@ -54,8 +54,10 @@ interface Property {
 
 export default async function PropertyDetail({
   params,
+  searchParams,
 }: {
   params: { slug: string }
+  searchParams: { name: string }
 }) {
   const { slug } = params
   const singleProperty = await getSingleProperty(slug)
@@ -148,7 +150,7 @@ export default async function PropertyDetail({
                   alan@therise.group
                 </div>
               </div>
-              <MessageForm slug={slug} />
+              <MessageForm slug={slug} name={searchParams.name} />
             </CardContent>
           </Card>
         </div>

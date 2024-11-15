@@ -10,7 +10,7 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 
-const MessageForm = ({ slug }: { slug: any }) => {
+const MessageForm = ({ slug, name }: { slug: string; name: string }) => {
   const router = useRouter()
   const formRef = React.useRef<HTMLFormElement>(null)
   const { toast } = useToast()
@@ -18,7 +18,7 @@ const MessageForm = ({ slug }: { slug: any }) => {
     <form
       ref={formRef}
       action={async (formData) => {
-        await createMessage(formData, slug)
+        await createMessage(formData, slug, name)
         formRef.current?.reset() // Reset all form fields
         toast({
           className: "border border-primary",

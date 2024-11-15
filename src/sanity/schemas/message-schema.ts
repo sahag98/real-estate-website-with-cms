@@ -4,6 +4,11 @@ const message = {
   type: "document",
   fields: [
     {
+      name: "propertyName",
+      title: "Property Name",
+      type: "string",
+    },
+    {
       name: "name",
       title: "Name",
       type: "string",

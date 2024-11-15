@@ -72,7 +72,10 @@ export default async function PropertyListings() {
                 </div>
               </CardContent>
               <CardFooter className="p-6 pt-0">
-                <Link className="w-full" href={`/property/${property.slug}`}>
+                <Link
+                  className="w-full"
+                  href={`/property/${property.slug}?name=${property.title}`}
+                >
                   <Button className="w-full rounded-md bg-primary py-2 text-base font-bold text-primary-foreground transition-colors duration-300 hover:bg-background hover:text-foreground">
                     View Property
                   </Button>

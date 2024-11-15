@@ -35,8 +35,7 @@ export async function createMessage(
 
     const { data, error } = await resend.emails.send({
       from: `Website <alan@alanreyesrealty.com>`,
-      to: ["arzsahag@gmail.com"],
-      cc: ["sahagking@gmail.com"],
+      to: ["alan@therise.group"],
       subject: "New Message for Property",
       react: EmailTemplate({
         name: newMessage.name,

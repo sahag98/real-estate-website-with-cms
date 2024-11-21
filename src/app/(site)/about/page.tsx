@@ -2,7 +2,7 @@ import React from "react"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { getStats } from "@/sanity/sanity-utils"
+import { getAboutDescription, getStats } from "@/sanity/sanity-utils"
 import { Instagram } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
@@ -21,14 +21,15 @@ export const metadata: Metadata = {
 
 const AboutPage = async () => {
   const stats = await getStats()
-
+  const about = await getAboutDescription()
+  console.log("about: ", about)
   return (
     <div className="flex min-h-screen flex-col items-start justify-between">
       <div className="relative flex min-h-screen w-full flex-col items-center justify-between gap-4 pt-24 text-center md:flex-row-reverse md:gap-0 lg:h-screen">
         <div className="flex h-full flex-1 items-center justify-center bg-secondary p-4">
           <Image
             className="md:w-3/5"
-            src={"/hero-img.jpeg"}
+            src={about[0].image}
             width={635}
             height={847}
             alt="Alan Reyes"
@@ -47,10 +48,7 @@ const AboutPage = async () => {
           />
 
           <BlurIn
-            word="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-            dolores vero, voluptatibus neque dolor voluptas suscipit
-            perspiciatis pariatur dolore tempore temporibus optio repellat culpa
-            voluptates hic, repudiandae nisi. Praesentium, repudiandae!"
+            word={about[0].description}
             className="text-start text-xl text-muted-foreground"
           />
           <Link href={`tel:${siteConfig.links.tel}`}>

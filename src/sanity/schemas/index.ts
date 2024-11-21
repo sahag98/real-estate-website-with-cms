@@ -1,3 +1,4 @@
+import aboutDescription from "./about-description"
 import aboutHome from "./about-home-schema"
 import blog from "./blog-schema"
 import expertise from "./expertise-schema"
@@ -22,6 +23,7 @@ const schemas = [
   property,
   message,
   hero,
+  aboutDescription,
 ]
 
 export default schemas

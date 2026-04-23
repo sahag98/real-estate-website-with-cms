@@ -1,7 +1,7 @@
 // React and Next.js imports
 import Image from "next/image"
 // Icon imports
-import { Facebook, Github, Instagram, Twitter, Youtube } from "lucide-react"
+import { AtSign, Globe } from "lucide-react"
 import { Link } from "next-view-transitions"
 // Third-party library imports
 import Balancer from "react-wrap-balancer"
@@ -86,7 +86,7 @@ export default function Footer() {
               href={"https://www.instagram.com/reyesrealty7"}
             >
               <Button size="icon">
-                <Instagram className="" />
+                <AtSign className="" />
               </Button>
             </Link>
 
@@ -95,7 +95,7 @@ export default function Footer() {
               href={"https://www.facebook.com/profile.php?id=100089914718816"}
             >
               <Button size="icon">
-                <Facebook className="" />
+                <Globe className="" />
               </Button>
             </Link>
           </div>

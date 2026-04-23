@@ -3,7 +3,7 @@ const config = {
   dataset: "production",
   apiVersion: "2024-03-09",
   token: process.env.SANITY_API_TOKEN,
-  useCdn: true,
+  useCdn: false,
 }
 
 export default config

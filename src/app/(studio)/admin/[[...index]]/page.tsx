@@ -4,7 +4,8 @@ import { NextStudio } from "next-sanity/studio"
 
 import config from "../../../../../sanity.config"
 
-export const dynamic = "force-static"
+// Embedded Studio must not be statically prerendered; it needs a live client bundle.
+export const dynamic = "force-dynamic"
 
 export default function AdminPage() {
   return <NextStudio config={config} />

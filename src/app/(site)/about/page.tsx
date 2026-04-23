@@ -3,8 +3,6 @@ import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { getAboutDescription, getStats } from "@/sanity/sanity-utils"
-import { Instagram } from "lucide-react"
-
 import { siteConfig } from "@/config/site"
 import BlurInButton from "@/components/ui/blur-button"
 import BlurIn from "@/components/ui/blur-in"

@@ -25,7 +25,7 @@ export async function getStats(): Promise<Stat[]> {
      description
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -38,7 +38,7 @@ export async function getExpertise(): Promise<Expertise[]> {
      description
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -51,7 +51,7 @@ export async function getFaqs(): Promise<Faq[]> {
      answer,
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -65,7 +65,7 @@ export async function getAboutHome(): Promise<AboutHome[]> {
      description,
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -78,7 +78,7 @@ export async function getAboutDescription(): Promise<any[]> {
      description,
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -89,7 +89,7 @@ export async function getHeroImg(): Promise<{ _id: string; image: string }[]> {
      "image": image.asset->url,
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -102,7 +102,7 @@ export async function getStatInfo(): Promise<StatInfo[]> {
      "image": image.asset->url,
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -117,7 +117,7 @@ export async function getBlogs(): Promise<BlogInfo[]> {
       content
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -134,7 +134,7 @@ export async function getBlogBySearch(
       content
     }`,
     { title },
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -149,7 +149,7 @@ export async function getSingleBlog(id: string): Promise<SingleBlog | null> {
       content
     }`,
     { id },
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -163,7 +163,7 @@ export async function getSuccessStories(): Promise<SuccessStories[]> {
       "video": video.asset->url,
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -176,7 +176,7 @@ export async function getReviews(): Promise<Reviews[]> {
       content,
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -202,7 +202,7 @@ export async function getProperties(): Promise<Properties[]> {
       features
     }`,
     {},
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 
@@ -228,7 +228,7 @@ export async function getSingleProperty(slug: string): Promise<Properties> {
       features
     }`,
     { slug },
-    { useCdn: true }
+    { cache: "no-store" }
   )
 }
 

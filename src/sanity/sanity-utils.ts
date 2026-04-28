@@ -14,6 +14,9 @@ import {
   SuccessStories,
 } from "./types"
 
+const SANITY_REVALIDATE_SECONDS = 120
+const SANITY_FETCH_OPTIONS = { next: { revalidate: SANITY_REVALIDATE_SECONDS } }
+
 export async function getStats(): Promise<Stat[]> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "stat"]| order(_createdAt asc){
@@ -25,7 +28,7 @@ export async function getStats(): Promise<Stat[]> {
      description
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -38,7 +41,7 @@ export async function getExpertise(): Promise<Expertise[]> {
      description
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -51,7 +54,7 @@ export async function getFaqs(): Promise<Faq[]> {
      answer,
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -65,7 +68,7 @@ export async function getAboutHome(): Promise<AboutHome[]> {
      description,
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -78,7 +81,7 @@ export async function getAboutDescription(): Promise<any[]> {
      description,
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -89,7 +92,7 @@ export async function getHeroImg(): Promise<{ _id: string; image: string }[]> {
      "image": image.asset->url,
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -102,7 +105,7 @@ export async function getStatInfo(): Promise<StatInfo[]> {
      "image": image.asset->url,
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -117,7 +120,7 @@ export async function getBlogs(): Promise<BlogInfo[]> {
       content
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -134,7 +137,7 @@ export async function getBlogBySearch(
       content
     }`,
     { title },
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -149,7 +152,7 @@ export async function getSingleBlog(id: string): Promise<SingleBlog | null> {
       content
     }`,
     { id },
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -163,7 +166,7 @@ export async function getSuccessStories(): Promise<SuccessStories[]> {
       "video": video.asset->url,
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -176,7 +179,7 @@ export async function getReviews(): Promise<Reviews[]> {
       content,
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -202,7 +205,7 @@ export async function getProperties(): Promise<Properties[]> {
       features
     }`,
     {},
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 
@@ -228,7 +231,7 @@ export async function getSingleProperty(slug: string): Promise<Properties> {
       features
     }`,
     { slug },
-    { cache: "no-store" }
+    SANITY_FETCH_OPTIONS
   )
 }
 

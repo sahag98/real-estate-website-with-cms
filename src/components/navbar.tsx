@@ -11,10 +11,9 @@ import { cn } from "@/lib/utils"
 const Navbar = () => {
   const pathname = usePathname()
 
-  console.log(pathname)
   const [navOpen, setNavOpen] = useState(false)
   return (
-    <nav className="fixed top-0 z-20 w-full border-b bg-background">
+    <nav className="fixed top-0 z-20 w-full border-b border-secondary/25 bg-background">
       <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-3">
         <Link href={"/"}>
           <Image
@@ -58,19 +57,17 @@ const Navbar = () => {
           )}
           id="navbar-default"
         >
-          <ul className="mt-4 flex flex-col space-y-10 rounded-lg border bg-secondary p-4  md:mt-0  md:flex-row md:space-x-10 md:space-y-0 md:border-0 md:bg-background md:p-0  rtl:space-x-reverse">
+          <ul className="mt-4 flex flex-col space-y-10 rounded-lg border bg-secondary p-4 text-background md:mt-0 md:flex-row md:space-x-10 md:space-y-0 md:border-0 md:bg-background md:p-0 md:text-secondary rtl:space-x-reverse">
             <Link
               onClick={() => setNavOpen(false)}
-              className={cn(pathname === "/" && " font-semibold text-primary")}
+              className={cn(pathname === "/" && "font-bold text-primary")}
               href={"/"}
             >
               Home
             </Link>
             <Link
               onClick={() => setNavOpen(false)}
-              className={cn(
-                pathname === "/about" && " font-semibold text-primary"
-              )}
+              className={cn(pathname === "/about" && "font-bold text-primary")}
               href={"/about"}
             >
               About
@@ -80,9 +77,7 @@ const Navbar = () => {
             </Link>
             <Link
               onClick={() => setNavOpen(false)}
-              className={cn(
-                pathname === "/blog" && " font-semibold text-primary"
-              )}
+              className={cn(pathname === "/blog" && "font-bold text-primary")}
               href={"/blog"}
             >
               Blog

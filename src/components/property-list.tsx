@@ -12,16 +12,22 @@ export default async function PropertyListings() {
   const properties = await getProperties()
 
   return (
-    <section id="properties" className=" px-4 py-24 md:px-6">
+    <section id="properties" className="px-4 pb-24 md:px-6">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-12 text-center text-3xl font-bold">
+        <h2 className="fade-in mb-12 text-center text-3xl font-bold">
           Featured Properties
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {properties.map((property) => (
+          {properties.map((property, index) => (
             <Card
               key={property._id}
-              className="overflow-hidden transition-shadow duration-300 hover:shadow-lg"
+              className={`fade-in overflow-hidden transition-shadow duration-300 hover:shadow-lg ${
+                index % 3 === 1
+                  ? "fade-in-delay-1"
+                  : index % 3 === 2
+                    ? "fade-in-delay-2"
+                    : ""
+              }`}
             >
               <CardHeader className="p-0">
                 <div className="relative">
@@ -37,13 +43,13 @@ export default async function PropertyListings() {
                     alt={property.title}
                     className="h-64 w-full object-cover"
                   /> */}
-                  <Badge className="absolute right-4 top-4 bg-primary text-primary-foreground">
+                  <Badge className="absolute right-4 top-4 bg-primary text-background">
                     {property.status}
                   </Badge>
                 </div>
               </CardHeader>
               <CardContent className="p-6">
-                <h3 className="mb-2 text-xl font-semibold text-foreground">
+                <h3 className="mb-2 text-xl font-semibold text-background">
                   {property.title}
                 </h3>
                 <p className="mb-4 text-2xl font-bold text-primary">
@@ -51,8 +57,8 @@ export default async function PropertyListings() {
                     ? property.amount
                     : `${property.amount}/month`}
                 </p>
-                <p className="mb-4 text-foreground/75">{property.address}</p>
-                <div className="flex justify-between text-foreground/60">
+                <p className="mb-4 text-background">{property.address}</p>
+                <div className="flex justify-between text-background">
                   <div className="flex items-center gap-1">
                     <Bed className="h-4 w-4" />
                     <span>{property.bedrooms}</span>

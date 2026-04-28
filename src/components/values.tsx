@@ -28,11 +28,11 @@ const Values = () => {
     },
   ]
   return (
-    <section className="w-full bg-[#1c1c1c] py-12 md:py-24 lg:py-32">
+    <section className="w-full bg-[#d7d7d7] py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tighter text-foreground fade-in sm:text-5xl">
               My Values
             </h2>
           </div>
@@ -41,7 +41,13 @@ const Values = () => {
           {values.map((value, index) => (
             <div
               key={index}
-              className="rounded-lg bg-background p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className={`rounded-lg bg-background p-6 transition-all duration-300 fade-in hover:-translate-y-1 hover:shadow-xl ${
+                index === 1
+                  ? "fade-in-delay-1"
+                  : index === 2
+                    ? "fade-in-delay-2"
+                    : ""
+              }`}
             >
               <div className="mb-4 flex justify-center">{value.icon}</div>
               <h3 className="mb-3 text-center text-xl font-bold text-foreground md:text-2xl">

@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 92%;
+    --foreground: 0 0% 7%%;
     --card: 0 0% 20%;
     --card-foreground: 0 0% 83%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 51, 100%, 50%;
+    --primary: 46, 37%, 49%;
     --primary-foreground: 0 0% 20%;
-    --secondary: 0 0% 20%;
+    --secondary: 0 0% 23%;
     --secondary-foreground: 0 0% 83%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
@@ -56,6 +56,47 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+  }
+}
+
+@keyframes fadeInUpSoft {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeInUpSoft 0.6s ease-out both;
+    will-change: opacity, transform;
+  }
+
+  .fade-in-delay-1 {
+    animation-delay: 80ms;
+  }
+
+  .fade-in-delay-2 {
+    animation-delay: 160ms;
+  }
+
+  .fade-in-delay-3 {
+    animation-delay: 240ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-in-delay-1,
+  .fade-in-delay-2,
+  .fade-in-delay-3 {
+    animation: none !important;
+    transform: none !important;
   }
 }
 

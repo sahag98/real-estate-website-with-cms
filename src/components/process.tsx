@@ -14,10 +14,10 @@ const Process = () => {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tighter fade-in sm:text-5xl">
               My Proven Process
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="fade-in-delay-1 max-w-[900px] text-muted-foreground fade-in md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               I follow a structured approach to ensure a smooth experience for
               both first-time buyers and sellers, guiding you every step of the
               way.
@@ -25,18 +25,18 @@ const Process = () => {
           </div>
         </div>
         <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3 lg:gap-12">
-          <div className="flex flex-col items-center justify-center space-y-4">
+          <div className="flex flex-col items-center justify-center space-y-4 fade-in">
             <ClipboardIcon className="h-12 w-12 text-primary" />
             <div className="space-y-1 text-center">
               <h3 className="text-2xl font-bold">Consultation</h3>
-              <p className="text-muted-foreground md:text-lg">
+              <p className="text-balance text-muted-foreground md:text-lg">
                 I begin by understanding your unique needs and preferences,
                 ensuring we find the perfect property or buyer that fits your
                 goals.
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center space-y-4">
+          <div className="fade-in-delay-1 flex flex-col items-center justify-center space-y-4 fade-in">
             <WrenchIcon className="h-12 w-12 text-primary" />
             <div className="space-y-1 text-center">
               <h3 className="text-2xl font-bold">Execution</h3>
@@ -47,7 +47,7 @@ const Process = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center space-y-4">
+          <div className="fade-in-delay-2 flex flex-col items-center justify-center space-y-4 fade-in">
             <CheckCheckIcon className="h-12 w-12 text-primary" />
             <div className="space-y-1 text-center">
               <h3 className="text-2xl font-bold">Support</h3>

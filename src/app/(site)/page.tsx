@@ -50,10 +50,12 @@ export default async function Home() {
                 word="Find Your First Home"
               />
             </Link>
-            <BlurInButton
-              className="bg-secondary text-background"
-              word="Ask About Selling"
-            />
+            <Link className="" href={"/value"}>
+              <BlurInButton
+                className="w-full bg-secondary text-background"
+                word="What's My Home Worth?"
+              />
+            </Link>
             {/* <Link
               href={`tel:${siteConfig.links.tel}`}
               target="_blank"

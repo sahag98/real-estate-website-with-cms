@@ -29,7 +29,10 @@ export default async function Stats({ stats }: { stats: Stat[] }) {
             <CardHeader>
               <CardTitle className="text-center text-4xl font-bold">
                 {stat.currency}
-                <NumberTicker value={stat.number} />
+                <NumberTicker
+                  value={stat.number}
+                  decimalPlaces={Number.isInteger(stat.number) ? 0 : 1}
+                />
                 {stat.amount}
               </CardTitle>
             </CardHeader>

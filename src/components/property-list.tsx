@@ -11,6 +11,9 @@ import { Button } from "./ui/button"
 export default async function PropertyListings() {
   const properties = await getProperties()
 
+  // Hide the whole section until at least one listing is published in Sanity.
+  if (!properties?.length) return null
+
   return (
     <section id="properties" className="px-4 pb-24 md:px-6">
       <div className="mx-auto max-w-7xl">

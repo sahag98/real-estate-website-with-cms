@@ -44,7 +44,7 @@ export default async function Home() {
           </p> */}
 
           <div className="fade-in-delay-2 flex w-full flex-col gap-3 fade-in md:gap-6 lg:flex-row">
-            <Link className="" href={"#properties"}>
+            <Link className="" href={"/buy"}>
               <BlurInButton
                 className="w-full md:animate-buttonheartbeat"
                 word="Find Your First Home"

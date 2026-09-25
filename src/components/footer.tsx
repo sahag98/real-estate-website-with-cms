@@ -81,13 +81,13 @@ export default function Footer() {
             </Link>
             <Link
               className="text-lg font-medium underline underline-offset-2"
-              href="#expertise"
+              href="/#expertise"
             >
               Expertise
             </Link>
             <Link
               className="text-lg font-medium underline underline-offset-2"
-              href="#faq"
+              href="/#faq"
             >
               Faq
             </Link>

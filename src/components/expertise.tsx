@@ -1,8 +1,17 @@
 import React from "react"
+import Link from "next/link"
 import { getExpertise } from "@/sanity/sanity-utils"
 
 import SectionHeader from "./section-header"
 import { Button } from "./ui/button"
+
+// Where each card's "Get Started" button goes, by card name from Sanity.
+// Buying -> buyer lead form (/buy), Selling -> home value form (/value).
+function ctaHref(name?: string) {
+  const n = (name || "").toLowerCase()
+  if (n.includes("sell")) return "/value"
+  return "/buy"
+}
 
 const Expertise = async () => {
   const expertises = await getExpertise()
@@ -29,7 +38,9 @@ const Expertise = async () => {
           >
             <h2 className="text-4xl font-bold">{expertise.name}</h2>
             <p className="flex-1 md:text-lg">{expertise.description}</p>
-            <Button className="mt-auto text-base font-bold">Get Started</Button>
+            <Button className="mt-auto text-base font-bold" asChild>
+              <Link href={ctaHref(expertise.name)}>Get Started</Link>
+            </Button>
           </div>
         ))}
       </section>

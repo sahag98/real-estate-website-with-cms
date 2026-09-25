@@ -79,7 +79,7 @@ const AboutPage = async () => {
             property, I&apos;m here to guide you every step of the way.
             Let&apos;s make your real estate journey seamless and successful.
           </p>
-          <Link href={"/#properties"}>
+          <Link href={"/buy"}>
             <Button className="text-base font-bold">Get Started Today</Button>
           </Link>
         </div>
